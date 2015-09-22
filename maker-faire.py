@@ -76,10 +76,12 @@ while True:
 		sense.show_message("Temp: " + str(temp) + " Humidity: " + str(humidity_value) + "%", scroll_speed=.05)
 		currentMode = 0
 	if currentMode == 2:
+		if lastRun is not currentMode:
+			sense.load_image("/home/pi/logo.png")
+			lastRun = currentMode
 		x, y, z = sense.get_accelerometer_raw().values()
 		x = round(x, 0)
 		y = round(y, 0)
-		sense.load_image("/home/pi/logo.png")
 		if x == -1:
 			sense.set_rotation(180)
 		elif y == 1:
