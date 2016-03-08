@@ -60,6 +60,7 @@ while True:
 			newColor[2] = int(newColor[2] * 255)
 			for x in range(0,8):
 				sense.set_pixel(x,y,newColor)
+		sleep(.03)
 		hue = hue + colorStep
 		if hue + colorStep > 1.0:
 			hue = hue - 1.0
@@ -77,7 +78,7 @@ while True:
 		currentMode = 0
 	if currentMode == 2:
 		if lastRun is not currentMode:
-			sense.load_image("/home/pi/logo.png")
+			sense.load_image("/home/pi/maker-faire-sense-hat-demo/logo.png")
 			lastRun = currentMode
 		x, y, z = sense.get_accelerometer_raw().values()
 		x = round(x, 0)
