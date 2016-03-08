@@ -97,7 +97,7 @@ while True:
 			# first execution stuff here if needed
 			sense.set_rotation(0)
 			lastRun = currentMode
-		sense.show_message("Raspberry Pi Loves Maker Faire", scroll_speed=.04, text_colour=(255,0,0))
+		sense.show_message("Teach, Learn and Make with Raspberry Pi", scroll_speed=.04, text_colour=(255,0,0))
 		currentMode = 0
 	if currentMode == 4:
 		if lastRun is not currentMode:
