@@ -2,6 +2,7 @@
 git clone https://github.com/mrichardson23/maker-faire-sense-hat-demo.git
 
 # Install evdev
+sudo apt-get update
 sudo apt-get install -y python-dev python-pip gcc
 sudo pip install evdev
 
